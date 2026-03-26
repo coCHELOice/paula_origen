@@ -31,8 +31,8 @@ export default function Hero() {
       <div className="md:col-span-7 relative h-full flex items-center mt-12 md:mt-0">
         <div className="w-full aspect-[4/5] md:aspect-auto md:h-[85vh] overflow-hidden">
           <img
-            src="/hero-editorial.png"
-            alt="Valle del Elqui — ORIGEN Retreat"
+            src="/silhouette-woman-sunset-mountains.jpg"
+            alt="Silueta de una mujer contemplando las montañas al atardecer"
             className="w-full h-full object-cover brightness-[0.95] saturate-[0.85] contrast-[1.02]"
             style={{
               maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
