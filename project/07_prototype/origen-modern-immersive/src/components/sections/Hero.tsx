@@ -9,10 +9,13 @@ export default function Hero() {
     <section className="relative min-h-[100svh] w-full flex items-center pt-24 pb-16 overflow-hidden">
       {/* Immersive Background */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <img
-          src="/silhouette-woman-sunset-mountains.jpg"
-          alt="Valle del Elqui atardecer"
-          className="w-full h-full object-cover brightness-[0.85] saturate-[0.9]"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover brightness-[0.7] saturate-[0.8] contrast-[1.05]"
+          src="/7866423-uhd_3840_2160_25fps.mp4"
         />
         {/* Soft atmospheric gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#EBE9E2] via-[#EBE9E2]/40 to-transparent"></div>
