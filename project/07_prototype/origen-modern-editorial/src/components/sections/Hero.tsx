@@ -30,10 +30,15 @@ export default function Hero() {
       
       <div className="md:col-span-7 relative h-full flex items-center mt-12 md:mt-0">
         <div className="w-full aspect-[3/4] sm:aspect-[4/5] md:aspect-auto md:h-[85vh] overflow-hidden">
-          <img
-            src="/silhouette-woman-sunset-mountains.jpg"
-            alt="Silueta de una mujer contemplando las montañas al atardecer"
-            className="w-full h-full object-cover brightness-[0.8] saturate-[0.85] contrast-[1.02]"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
+            className="w-full h-full object-cover brightness-[0.85] saturate-[0.8] contrast-[1.02]"
+            src="/7866423-uhd_3840_2160_25fps.mp4"
           />
         </div>
       </div>
