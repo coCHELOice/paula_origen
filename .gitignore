@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.vercel/
+build-log.txt
+.env
+.gemini/
+.antigravity/
