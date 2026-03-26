@@ -5,7 +5,7 @@ export default function LaExperiencia() {
   const { laExperiencia } = content;
   
   return (
-    <Section className="bg-brand-bgAlt">
+    <Section id="experiencia" className="bg-brand-bgAlt">
       <div className="grid md:grid-cols-12 gap-12 lg:gap-24">
         <div className="md:col-span-4 lg:col-span-5">
           <h2 className="font-serif text-4xl md:text-5xl mb-8">{laExperiencia.title}</h2>

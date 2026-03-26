@@ -15,25 +15,34 @@ export default function Reserva() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-2 gap-px md:gap-px bg-brand-text/8">
           {reserva.options.map((option, idx) => {
             const isSuite = idx === 1;
             return (
               <div 
                 key={idx} 
-                className={`flex flex-col p-10 md:p-14 ${isSuite ? 'bg-[#EAE8E0]' : 'bg-brand-bgAlt'}`}
+                className={`flex flex-col px-10 py-14 md:px-14 md:py-20 ${isSuite ? 'bg-[#EAE8E0]' : 'bg-brand-bg'}`}
               >
-                <h3 className="font-sans text-sm md:text-base tracking-[0.15em] uppercase text-brand-text/60 mb-8">
+                <span className="font-sans text-[11px] md:text-xs tracking-[0.2em] uppercase text-brand-muted mb-10">
                   {option.title}
-                </h3>
-                <p className="font-serif text-4xl md:text-5xl mb-8 text-brand-text">
-                  {option.price}
-                </p>
-                <p className="font-sans text-lg text-brand-text/80 leading-relaxed font-light mb-16">
+                </span>
+                <div className="mb-10">
+                  <p className="font-serif text-5xl md:text-6xl text-brand-text tracking-tight leading-none">
+                    {option.price}
+                  </p>
+                  <span className="font-sans text-xs text-brand-muted mt-2 block tracking-wide">
+                    por persona · todo incluido
+                  </span>
+                </div>
+                <p className="font-sans text-base md:text-lg text-brand-text/70 leading-relaxed font-light mb-auto">
                   {option.desc}
                 </p>
-                <div className="mt-auto pt-4 border-t border-brand-text/10">
-                  <Button variant={isSuite ? 'primary' : 'secondary'} href="#reserva" className={isSuite ? 'w-full' : 'mt-4'}>
+                <div className="pt-12">
+                  <Button
+                    variant={isSuite ? 'primary' : 'secondary'}
+                    href="#reserva"
+                    className="w-full text-center"
+                  >
                     {reserva.ctaPrimary}
                   </Button>
                 </div>

@@ -8,7 +8,7 @@ export default function FaqCierre() {
   
   return (
     <Section>
-      <div className="max-w-2xl mx-auto mb-32 md:mb-48">
+      <div className="max-w-2xl mx-auto mb-20 md:mb-28">
         <h2 className="font-serif text-3xl md:text-4xl mb-16 px-4">{faqCierre.title}</h2>
         <div className="border-t border-brand-text/10">
           {faqCierre.faqs.map((faq, idx) => (
@@ -17,10 +17,13 @@ export default function FaqCierre() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center px-4">
-        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-16 px-4">
+      <div className="max-w-3xl mx-auto text-center px-4 pb-8">
+        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-10">
           {faqCierre.closing}
         </h2>
+        <p className="font-sans text-brand-muted text-base mb-10 font-light">
+          16–20 de abril · Valle del Elqui · Cupos limitados
+        </p>
         <Button variant="primary" href="#reserva" className="text-lg px-14 py-5 w-full sm:w-auto">
           {faqCierre.ctaFinal}
         </Button>

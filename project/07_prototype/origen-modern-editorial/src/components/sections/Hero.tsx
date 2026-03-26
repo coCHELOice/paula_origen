@@ -29,16 +29,15 @@ export default function Hero() {
       </div>
       
       <div className="md:col-span-7 relative h-full flex items-center mt-12 md:mt-0">
-        <div className="w-full aspect-[4/3] md:aspect-auto md:h-[80vh] bg-brand-bgAlt overflow-hidden rounded-[2rem] shadow-2xl shadow-brand-text/5">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
-            className="w-full h-full object-cover brightness-90 saturate-75 contrast-105 sepia-[15%]"
-            src="/001insta.mp4"
+        <div className="w-full aspect-[4/5] md:aspect-auto md:h-[85vh] overflow-hidden">
+          <img
+            src="/hero-editorial.png"
+            alt="Valle del Elqui — ORIGEN Retreat"
+            className="w-full h-full object-cover brightness-[0.95] saturate-[0.85] contrast-[1.02]"
+            style={{
+              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+            }}
           />
         </div>
       </div>
