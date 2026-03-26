@@ -2,7 +2,7 @@ export const content = {
   hero: {
     eyebrow: "RETIRO ORIGEN",
     title: "ORIGEN — Cinco días en el Valle del Elqui para pausar, respirar y reconectar.",
-    subtitle: "Una experiencia íntima y cuidadosamente curada para mujeres que necesitan una pausa real: movimiento, meditación, ritual, belleza consciente, alimentación y comunidad en el corazón del Valle del Elqui.",
+    subtitle: "Cinco días de movimiento, ritual y presencia en el corazón del Valle del Elqui. Una pausa diseñada para mujeres que necesitan volver al cuerpo y reconectar con lo esencial.",
     meta: ["Valle del Elqui · Alcohuaz", "16–20 de abril"],
     ctaPrimary: "Reserva tu lugar",
     ctaSecondary: "Ver programa"
@@ -10,17 +10,15 @@ export const content = {
   queEsOrigen: {
     title: "Qué es ORIGEN",
     paragraphs: [
-      "ORIGEN es una experiencia de cinco días diseñada para ayudarte a salir del ruido, volver al cuerpo y reconectar contigo en un entorno natural profundamente cuidado.",
-      "A través de prácticas de movimiento, meditación, respiración, ritual, alimentación consciente y espacios de conversación entre mujeres, la experiencia crea una pausa real para escuchar, integrar y volver a ti.",
-      "Más que un retiro, ORIGEN es una experiencia compartida donde el bienestar se vive con presencia, belleza y comunidad."
+      "Cinco días para salir del ruido y habitar el cuerpo en un entorno natural cuidadosamente curado.",
+      "Una experiencia que integra movimiento, rituales y comunidad para crear una pausa real de escucha y renovación profunda."
     ]
   },
   paraQuienEs: {
     title: "Para quién es ORIGEN",
     paragraphs: [
-      "ORIGEN es para mujeres que sienten que necesitan una pausa de verdad.",
-      "Para quienes vienen sosteniendo demasiado, moviéndose demasiado rápido o viviendo demasiado hacia afuera. Para quienes quieren volver al cuerpo, recuperar claridad y regalarse una experiencia íntima, bella y transformadora.",
-      "Si buscas descanso con sentido, prácticas que te ayuden a reconectar, naturaleza viva y una comunidad femenina que acompañe sin ruido ni artificio, ORIGEN puede ser para ti."
+      "Para mujeres que sostienen demasiado y necesitan recuperar claridad, descanso y ritmo propio.",
+      "Si buscas belleza consciente, naturaleza viva y una comunidad que acompañe sin artificio, ORIGEN puede ser para ti."
     ]
   },
   laExperiencia: {
@@ -52,7 +50,7 @@ export const content = {
   elLugar: {
     title: "El lugar",
     paragraphs: [
-      "Nos reuniremos en Alcohuaz, en el corazón del Valle del Elqui: un territorio de contrastes, cielos despejados y una calma que invita naturalmente a bajar el ritmo.",
+      "Nos reuniremos en Alcohuaz, en el corazón del Valle del Elqui: un territorio de contrastes, cielos despejados y una calma que invita naturally a bajar el ritmo.",
       "El entorno no es solo un telón de fondo, sino una parte esencial de la experiencia. Desde la mesa compartida hasta las noches bajo las estrellas, el lugar ofrece la distancia y la intimidad necesarias para dejar atrás las exigencias cotidianas y volver a lo esencial."
     ]
   },
@@ -62,23 +60,23 @@ export const content = {
     days: [
       {
         title: "Día 1 — Llegar y aterrizar",
-        desc: "Brunch de bienvenida, tiempo para instalarse, apertura de la experiencia y cena compartida para comenzar a bajar el ritmo."
+        desc: "Bienvenida, apertura de la experiencia y cena para aterrizar el ritmo."
       },
       {
         title: "Día 2 — Enraizar",
-        desc: "Silencio matutino, meditación suave, temazcal, prácticas de movilidad y una experiencia de slow beauty. El día cierra junto al fuego y bajo las estrellas."
+        desc: "Silencio, meditación y temazcal. Prácticas de movilidad y slow beauty bajo las estrellas."
       },
       {
         title: "Día 3 — Abrir espacio",
-        desc: "Movimiento enfocado en la respiración y la ligereza, una salida a Viña Alcohuaz y un regreso más pausado para compartir conversación y presencia."
+        desc: "Movimiento consciente y respiración. Visita a Viña Alcohuaz y espacios de conversación íntima."
       },
       {
         title: "Día 4 — Integrar",
-        desc: "Un día para asentar lo vivido con prácticas suaves, descanso, viaje sonoro y una última cena compartida."
+        desc: "Integración y descanso. Prácticas suaves, pausa y viaje sonoro."
       },
       {
         title: "Día 5 — Cerrar y volver",
-        desc: "Desayuno sin prisa, últimas conversaciones y despedida para iniciar el regreso con la experiencia ya integrada."
+        desc: "Cierre y despedida sin prisa para regresar con la experiencia ya integrada."
       }
     ]
   },
@@ -88,15 +86,15 @@ export const content = {
     members: [
       {
         name: "Paula Suryaflow:",
-        desc: "guía en meditación y consciencia corporal. Con más de 25 años de trayectoria, acompaña procesos de reconexión desde la escucha, el cuerpo y la presencia."
+        desc: "Con 25 años de trayectoria, guía procesos de meditación y consciencia corporal desde la presencia profunda."
       },
       {
         name: "Paula Pesse:",
-        desc: "chef especializada. Su trabajo transforma la alimentación en una experiencia consciente, conectando las necesidades del cuerpo con los sabores del territorio."
+        desc: "Chef especializada en alimentación consciente; conecta los sabores del territorio con el bienestar del cuerpo."
       },
       {
         name: "Paz Urra:",
-        desc: "especialista en Slow Beauty. Guía una práctica de cuidado entendida como una forma de presencia y conexión con una misma."
+        desc: "Especialista en Slow Beauty; entiende el cuidado de la piel como una forma de presencia y conexión."
       }
     ]
   },

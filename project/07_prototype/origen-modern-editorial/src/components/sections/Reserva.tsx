@@ -15,19 +15,19 @@ export default function Reserva() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-px md:gap-px bg-brand-text/8">
+        <div className="grid md:grid-cols-2 gap-[1px] bg-brand-text/8">
           {reserva.options.map((option, idx) => {
             const isSuite = idx === 1;
             return (
               <div 
                 key={idx} 
-                className={`flex flex-col px-10 py-14 md:px-14 md:py-20 ${isSuite ? 'bg-[#EAE8E0]' : 'bg-brand-bg'}`}
+                className={`flex flex-col px-8 py-12 sm:px-10 sm:py-14 md:px-14 md:py-20 ${isSuite ? 'bg-[#EAE8E0]' : 'bg-brand-bg'}`}
               >
                 <span className="font-sans text-[11px] md:text-xs tracking-[0.2em] uppercase text-brand-muted mb-10">
                   {option.title}
                 </span>
                 <div className="mb-10">
-                  <p className="font-serif text-5xl md:text-6xl text-brand-text tracking-tight leading-none">
+                  <p className="font-serif text-4xl sm:text-5xl md:text-6xl text-brand-text tracking-tight leading-none">
                     {option.price}
                   </p>
                   <span className="font-sans text-xs text-brand-muted mt-2 block tracking-wide">

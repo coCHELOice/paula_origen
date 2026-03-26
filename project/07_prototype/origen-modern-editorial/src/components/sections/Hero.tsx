@@ -22,14 +22,14 @@ export default function Hero() {
             <span key={idx} className="font-sans text-sm text-brand-text/70">{item}</span>
           ))}
         </div>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
           <Button variant="primary" href="#reserva" className="w-full sm:w-auto">{hero.ctaPrimary}</Button>
-          <Button variant="secondary" href="#programa" className="mt-2 sm:mt-0 w-full sm:w-auto text-left sm:text-center">{hero.ctaSecondary}</Button>
+          <Button variant="secondary" href="#programa" className="w-full sm:w-auto">{hero.ctaSecondary}</Button>
         </div>
       </div>
       
       <div className="md:col-span-7 relative h-full flex items-center mt-12 md:mt-0">
-        <div className="w-full aspect-[4/5] md:aspect-auto md:h-[85vh] overflow-hidden">
+        <div className="w-full aspect-[3/4] sm:aspect-[4/5] md:aspect-auto md:h-[85vh] overflow-hidden">
           <img
             src="/silhouette-woman-sunset-mountains.jpg"
             alt="Silueta de una mujer contemplando las montañas al atardecer"
