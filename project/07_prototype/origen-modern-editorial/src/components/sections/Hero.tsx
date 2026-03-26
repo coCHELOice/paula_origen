@@ -33,11 +33,7 @@ export default function Hero() {
           <img
             src="/silhouette-woman-sunset-mountains.jpg"
             alt="Silueta de una mujer contemplando las montañas al atardecer"
-            className="w-full h-full object-cover brightness-[0.95] saturate-[0.85] contrast-[1.02]"
-            style={{
-              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-            }}
+            className="w-full h-full object-cover brightness-[0.8] saturate-[0.85] contrast-[1.02]"
           />
         </div>
       </div>
