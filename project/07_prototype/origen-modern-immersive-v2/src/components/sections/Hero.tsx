@@ -56,7 +56,7 @@ export default function Hero() {
   }, []);
   
   return (
-    <section id="hero" className="relative h-[100svh] w-full flex items-center pt-36 md:pt-24 pb-16 overflow-hidden bg-[#151515] scale-on-hover-container">
+    <section id="hero" className="relative h-[100svh] w-full flex items-center pt-40 md:pt-32 lg:pt-36 pb-16 overflow-hidden bg-[#151515] scale-on-hover-container">
       {/* Immersive Cinematic Background (Parallax) */}
       <div className="absolute inset-0 w-full h-[120%] -top-[10%] z-0 parallax-bg" data-speed="0.10">
         <video
