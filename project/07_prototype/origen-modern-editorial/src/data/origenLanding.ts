@@ -2,7 +2,7 @@ export const content = {
   hero: {
     eyebrow: "RETIRO ORIGEN",
     title: "ORIGEN — Cinco días en el Valle del Elqui para pausar, respirar y reconectar.",
-    subtitle: "Cinco días de movimiento, ritual y presencia en el corazón del Valle del Elqui. Una pausa diseñada para mujeres que necesitan volver al cuerpo y reconectar con lo esencial.",
+    subtitle: "Una experiencia íntima para mujeres que necesitan una pausa real. Movimiento, meditación, ritual y comunidad en el corazón del Valle del Elqui.",
     meta: ["Valle del Elqui · Alcohuaz", "16–20 de abril"],
     ctaPrimary: "Reserva tu lugar",
     ctaSecondary: "Ver programa"
