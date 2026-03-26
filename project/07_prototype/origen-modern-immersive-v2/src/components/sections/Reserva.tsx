@@ -39,7 +39,7 @@ export default function Reserva() {
                 </p>
                 <div className="pt-12">
                   <Button
-                    variant={isSuite ? 'primary' : 'secondary'}
+                    variant="primary"
                     href="#reserva"
                     className="w-full text-center"
                   >
