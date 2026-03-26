@@ -64,7 +64,7 @@ export default function Hero() {
           autoPlay
           muted
           playsInline
-          className="w-full h-full object-cover object-[75%_center] brightness-[1.1] saturate-[0.85] contrast-[0.95] sepia-[0.10] hue-rotate-[-5deg] animate-video-in"
+          className="w-full h-full object-cover object-center brightness-[1.1] saturate-[0.85] contrast-[0.95] sepia-[0.10] hue-rotate-[-5deg] animate-video-in"
           src="/7866423-uhd_3840_2160_25fps.mp4"
         />
         {/* Cinematic overlays: lift blacks with warm multiply, dark gradient overlay tracking from text side */}
