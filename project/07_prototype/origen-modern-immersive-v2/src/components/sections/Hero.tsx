@@ -93,7 +93,7 @@ export default function Hero() {
             <Button variant="primary" href="#reserva" className="w-full sm:w-auto shadow-lg shadow-black/20">
               {hero.ctaPrimary}
             </Button>
-            <Button variant="secondary" href="#programa" className="w-full sm:w-auto">
+            <Button variant="secondary" href="#programa" className="w-full sm:w-auto !text-[#FDFBFA] !border-[#FDFBFA]/30 hover:!border-[#FDFBFA]/50">
               {hero.ctaSecondary}
             </Button>
           </div>

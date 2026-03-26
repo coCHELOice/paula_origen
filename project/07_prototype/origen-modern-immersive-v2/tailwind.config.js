@@ -8,11 +8,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: '#EBE9E2',      /* Warmer, deeper off-white */
-          bgAlt: '#D5CCB4',   /* Earthy, atmospheric depth */
-          text: '#221F1C',    /* Deep warm charcoal */
-          accent: '#8C5A35',  /* Rich, slightly muted terracotta */
-          muted: '#7A756D',   /* Warm grey for secondary text */
+          bg: '#F3EDE6',      /* sand / papel cálido */
+          bgAlt: '#EADFD3',   /* clay-soft / adobe / cal */
+          text: '#2B2B2B',    /* text-main / carbón cálido */
+          accent: '#8C4A2F',  /* earth-deep / arcilla */
+          accentLighter: '#A65E2E', /* earth / terracota */
+          muted: '#6B6258',   /* tono tierra medio para secundarios */
         }
       },
       fontFamily: {

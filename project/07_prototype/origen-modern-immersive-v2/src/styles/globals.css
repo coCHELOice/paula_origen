@@ -15,12 +15,12 @@
     }
   }
   ::selection {
-    background-color: rgba(166, 124, 82, 0.15);
-    color: #1C1C1D;
+    background-color: rgba(140, 74, 47, 0.15); /* earth-deep */
+    color: #2B2B2B;
   }
 }
 
-/* Global grain overlay - REMOVED FOR PERFORMANCE */
+/* Global grain overlay - REMOVED TO ENSURE ZERO FRICTION */
 .grain-overlay {
   display: none;
 }
@@ -29,8 +29,8 @@
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(20px);
-  /* removed filter: blur to reduce paint cost */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  /* No filters here for performance */
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   will-change: opacity, transform;
 }
 

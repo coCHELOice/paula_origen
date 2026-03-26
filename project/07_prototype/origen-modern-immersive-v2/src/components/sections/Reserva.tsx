@@ -21,7 +21,7 @@ export default function Reserva() {
             return (
               <div 
                 key={idx} 
-                className={`flex flex-col px-8 py-12 sm:px-10 sm:py-14 md:px-14 md:py-20 ${isSuite ? 'bg-[#EAE8E0]' : 'bg-brand-bg'}`}
+                className={`flex flex-col px-8 py-12 sm:px-10 sm:py-14 md:px-14 md:py-20 ${isSuite ? 'bg-brand-bgAlt' : 'bg-white/40'}`}
               >
                 <span className="font-sans text-[11px] md:text-xs tracking-[0.2em] uppercase text-brand-muted mb-10">
                   {option.title}
