@@ -5,7 +5,7 @@ export default function QueIncluye() {
   const { queIncluye } = content;
   
   return (
-    <Section id="que-incluye" className="bg-brand-bgAlt/50">
+    <Section id="experiencia" className="bg-brand-bgAlt/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-24 md:mb-32">
           <h2 className="font-serif text-5xl md:text-6xl mb-10 tracking-tight">{queIncluye.title}</h2>

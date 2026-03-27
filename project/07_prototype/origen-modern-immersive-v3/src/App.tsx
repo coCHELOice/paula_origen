@@ -52,9 +52,9 @@ function App() {
       <Hero />
       <Paula />
       <QueEsOrigen />
+      <QueIncluye />
       <Programa />
       <MujeresDetras />
-      <QueIncluye />
       <Reserva />
       <FaqCierre />
     </main>
