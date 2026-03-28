@@ -20,17 +20,20 @@ export const content = {
       {
         name: "Paula Suryaflow",
         role: "Profesora de yoga y meditación",
-        desc: "Guía procesos de reconexión profunda desde el cuerpo y la presencia."
+        desc: "Guía procesos de reconexión profunda desde el cuerpo y la presencia.",
+        img: undefined
       },
       {
         name: "Paula Pesse",
         role: "Chef",
-        desc: "Diseña experiencias de alimentación consciente donde el cuerpo, el sabor y la emoción se integran."
+        desc: "Diseña experiencias de alimentación consciente donde el cuerpo, el sabor y la emoción se integran.",
+        img: undefined
       },
       {
         name: "Paz Urra",
         role: "Especialista en Slow Beauty",
-        desc: "Acompaña procesos de cuidado consciente desde el ritual y la conexión interior."
+        desc: "Acompaña procesos de cuidado consciente desde el ritual y la conexión interior.",
+        img: undefined
       }
     ]
   },

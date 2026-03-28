@@ -19,7 +19,7 @@ export default function MujeresDetras() {
 
         {/* Team grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-20">
-          {mujeresDetras.members.map((member, idx) => (
+          {mujeresDetras.members.map((member: any, idx: number) => (
             <div key={idx} className="flex flex-col group">
               {/* Portrait */}
               <div className="aspect-[4/5] bg-brand-bgAlt/50 mb-6 md:mb-10 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000">
