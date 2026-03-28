@@ -8,6 +8,7 @@ import QueIncluye from './components/sections/QueIncluye';
 import Reserva from './components/sections/Reserva';
 import FaqCierre from './components/sections/FaqCierre';
 import Header from './components/layout/Header';
+import VisualInterlude from './components/ui/VisualInterlude';
 
 function App() {
   useEffect(() => {
@@ -21,8 +22,8 @@ function App() {
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    // Apply reveal to all top-level sections except hero
-    document.querySelectorAll('main > section:not(#hero)').forEach(el => {
+    // Apply reveal to all top-level sections AND visual interludes
+    document.querySelectorAll('main > section:not(#hero), .visual-interlude img').forEach(el => {
       el.classList.add('reveal-on-scroll');
       observer.observe(el);
     });
@@ -51,10 +52,42 @@ function App() {
       <Header />
       <Hero />
       <Paula />
+
+      {/* PAUSA 1 — Transición desde lo conceptual */}
       <QueEsOrigen />
+      <VisualInterlude 
+        src="/media/house/portal.avif" 
+        alt="Portal hacia ORIGEN" 
+        height="75vh"
+        maxWidth="1200px"
+        className="px-5 sm:px-8"
+      />
+
       <QueIncluye />
+
+      {/* PAUSA 2 — Sensorial / Vida vivida */}
+      <VisualInterlude 
+        src="/media/house/desayuno.avif" 
+        alt="Desayuno pausado y consciente" 
+        height="60vh"
+        maxWidth="1000px"
+        className="px-5 sm:px-8"
+      />
+
       <Programa />
+      
       <MujeresDetras />
+
+      {/* PAUSA 3 — Emocional de alto impacto (Habitación Suite) */}
+      <VisualInterlude 
+        src="/media/house/habitacion-suite.jpg" 
+        alt="Habitación Suite — Tu refugio privado" 
+        height="85vh"
+        maxWidth="100%"
+        overlay={0.15}
+        className="!my-0 pb-16 md:pb-28 lg:pb-36"
+      />
+
       <Reserva />
       <FaqCierre />
     </main>
