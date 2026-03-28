@@ -21,13 +21,13 @@ export const content = {
         name: "Paula Suryaflow",
         role: "Profesora de yoga y meditación",
         desc: "Guía procesos de reconexión profunda desde el cuerpo y la presencia.",
-        img: undefined
+        img: "/media/team/paula-suryaflow.jpg"
       },
       {
         name: "Paula Pesse",
         role: "Chef",
         desc: "Diseña experiencias de alimentación consciente donde el cuerpo, el sabor y la emoción se integran.",
-        img: undefined
+        img: "/media/team/paula-pesse.jpg"
       },
       {
         name: "Paz Urra",
@@ -117,7 +117,7 @@ export const content = {
       {
         title: "Habitación compartida",
         price: "$1.590.000 CLP",
-        desc: "2 personas en una habitación. Un espacio compartido con otra mujer en este mismo viaje.",
+        desc: "2 a 3 personas en una habitación. Un espacio ideal para compartir con otras mujeres en este mismo viaje.",
         img: "/habitacion-compartida.jpg"
       },
       {

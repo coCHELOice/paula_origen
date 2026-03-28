@@ -117,7 +117,7 @@ export const content = {
       {
         title: "Habitación compartida",
         price: "$1.590.000 CLP",
-        desc: "2 personas en una habitación. Un espacio compartido con otra mujer en este mismo viaje.",
+        desc: "2 a 3 personas en una habitación. Un espacio ideal para compartir con otras mujeres en este mismo viaje.",
         img: "/media/house/habitacion-compartida.jpg"
       },
       {
