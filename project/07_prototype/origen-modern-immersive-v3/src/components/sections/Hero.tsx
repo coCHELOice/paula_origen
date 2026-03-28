@@ -1,66 +1,116 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Button from '../ui/Button';
 import { content } from '../../data/origenLanding';
 
 export default function Hero() {
   const { hero } = content;
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [fading, setFading] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Cinematic slow playback
-    video.playbackRate = 0.85;
-    
-    // Ensure it plays
-    const attemptPlay = () => {
-      video.play().catch(() => {
-        // Handle potential autoplay block
-        console.log("Autoplay waiting for interaction");
-      });
+    video.playbackRate = 0.80;
+
+    // Suave fade-out antes del final → fade-in al reiniciar
+    const handleTimeUpdate = () => {
+      if (!video.duration) return;
+      const remaining = video.duration - video.currentTime;
+
+      // Empieza a hacer fade-out 1.8s antes del final
+      if (remaining <= 1.8 && !fading) {
+        setFading(true);
+      }
     };
-    
-    attemptPlay();
+
+    const handleEnded = () => {
+      // Si loop=false lo manejamos nosotros para controlar la transición
+      video.currentTime = 0;
+      setTimeout(() => {
+        video.play().catch(() => {});
+        setFading(false);
+      }, 400); // pequeña pausa negra en el corte para el fade-in
+    };
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    video.addEventListener('ended', handleEnded);
+
+    video.play().catch(() => {});
+
+    return () => {
+      video.removeEventListener('timeupdate', handleTimeUpdate);
+      video.removeEventListener('ended', handleEnded);
+    };
   }, []);
 
   return (
     <section
       id="hero"
-      className="relative w-full flex items-end sm:items-center overflow-hidden bg-[#151515] scale-on-hover-container"
+      className="relative w-full flex items-end sm:items-center overflow-hidden bg-[#0E0E0E]"
       style={{ minHeight: '100svh' }}
     >
-      {/* Immersive Cinematic Background */}
-      <div className="absolute inset-0 w-full h-[120%] -top-[10%] z-0 parallax-bg" data-speed="0.10">
+      {/* ── Cinematic Background Video ── */}
+      <div className="absolute inset-0 z-0">
+        {/* Video con fade suave en loop */}
         <video
           ref={videoRef}
-          autoPlay
           muted
-          loop
           playsInline
-          className="w-full h-full object-cover object-center brightness-[1.05] saturate-[0.9] contrast-[1.0] sepia-[0.05] animate-video-in"
+          className={`w-full h-full object-cover object-center transition-opacity duration-[1800ms] ease-in-out ${
+            fading ? 'opacity-0' : 'opacity-100'
+          }`}
+          style={{
+            filter: 'saturate(0.85) contrast(1.02) brightness(0.95)',
+          }}
           src="/0_Aerial_Flight_1080p.mp4"
         />
-        {/* Cinematic overlays */}
-        <div className="absolute inset-0 bg-[#A67C52]/5 mix-blend-color" />
-        {/* Strong left gradient for desktop, full bottom gradient for mobile */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/90 via-[#111111]/40 to-transparent sm:bg-gradient-to-r sm:from-[#111111] sm:via-[#111111]/60 sm:to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-[25%] bg-gradient-to-t from-[#151515] to-transparent" />
+
+        {/* ── Capa 1: viñeta lateral izquierda (donde va el texto) ── */}
+        {/*   muy pronunciada en desktop, más suave en mobile           */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(10,9,8,0.75) 0%, rgba(10,9,8,0.45) 38%, rgba(10,9,8,0.12) 65%, transparent 100%)',
+          }}
+        />
+
+        {/* ── Capa 2: gradiente inferior (ancla el texto en mobile) ── */}
+        <div
+          className="absolute inset-x-0 bottom-0"
+          style={{
+            height: '55%',
+            background:
+              'linear-gradient(to top, rgba(10,9,8,0.82) 0%, rgba(10,9,8,0.45) 40%, transparent 100%)',
+          }}
+        />
+
+        {/* ── Capa 3: velo global muy sutil – levanta los negros del video ── */}
+        {/*   No opaca, sólo da profundidad y mantiene el color cálido        */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'rgba(18,12,8,0.22)' }}
+        />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full px-5 sm:px-8 md:px-[8vw] pb-16 pt-28 sm:pt-32 md:pt-0 flex flex-col justify-end sm:justify-center min-h-[100svh]">
-        <div className="flex flex-col items-start w-full sm:max-w-[70vw] md:max-w-[50vw] lg:max-w-[42vw] xl:max-w-[38vw]">
+      {/* ── Content ── */}
+      <div
+        className="relative z-10 w-full px-5 sm:px-8 md:px-[8vw] pb-16 pt-28 sm:pt-32 md:pt-0
+                   flex flex-col justify-end sm:justify-center"
+        style={{ minHeight: '100svh' }}
+      >
+        <div className="flex flex-col items-start w-full sm:max-w-[70vw] md:max-w-[52vw] lg:max-w-[44vw] xl:max-w-[40vw]">
 
-          <span className="animate-hero-up font-sans text-[10px] sm:text-xs tracking-[0.22em] text-[#EBE9E2]/70 uppercase mb-5 sm:mb-8">
+          <span className="animate-hero-up font-sans text-[10px] sm:text-xs tracking-[0.24em] text-[#EBE9E2]/65 uppercase mb-5 sm:mb-8">
             {hero.eyebrow}
           </span>
 
-          <h1 className="animate-hero-sync-headline font-serif text-[clamp(2.6rem,10vw,6.5rem)] leading-[1.0] tracking-[-0.02em] mb-6 sm:mb-10 text-[#FDFBFA] drop-shadow-sm">
+          <h1 className="animate-hero-sync-headline font-serif text-[clamp(2.6rem,10vw,6.5rem)] leading-[1.0] tracking-[-0.02em] mb-6 sm:mb-10 text-[#FDFCF9] drop-shadow-[0_2px_16px_rgba(0,0,0,0.4)]">
             {hero.title}
           </h1>
 
-          <p className="animate-hero-sync-headline font-sans text-base sm:text-lg md:text-xl text-[#EBE9E2]/80 leading-[1.6] mb-10 sm:mb-14 font-light tracking-[0.02em] max-w-[90%] sm:max-w-none">
+          <p className="animate-hero-sync-headline font-sans text-base sm:text-lg md:text-xl text-[#EBE9E2]/75 leading-[1.65] mb-10 sm:mb-14 font-light tracking-[0.02em] max-w-[90%] sm:max-w-none drop-shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
             {hero.subtitle}
           </p>
 
@@ -68,14 +118,14 @@ export default function Hero() {
             <Button
               variant="primary"
               href="#reserva"
-              className="w-full xs:w-auto text-center shadow-lg shadow-black/20"
+              className="w-full xs:w-auto text-center shadow-lg shadow-black/30"
             >
               {hero.ctaPrimary}
             </Button>
             <Button
               variant="secondary"
               href="#programa"
-              className="w-full xs:w-auto text-center !text-[#FDFBFA] !border-[#FDFBFA]/30 hover:!border-[#FDFBFA]/50"
+              className="w-full xs:w-auto text-center !text-[#FDFCF9] !border-[#FDFCF9]/30 hover:!border-[#FDFCF9]/55"
             >
               {hero.ctaSecondary}
             </Button>
