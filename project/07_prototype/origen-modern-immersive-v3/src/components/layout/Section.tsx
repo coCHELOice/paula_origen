@@ -9,7 +9,10 @@ interface SectionProps {
 
 export default function Section({ id, children, className = '', containerClass = '' }: SectionProps) {
   return (
-    <section id={id} className={`py-24 md:py-32 px-6 w-full ${className}`}>
+    <section
+      id={id}
+      className={`py-16 sm:py-20 md:py-28 lg:py-36 px-5 sm:px-8 w-full ${className}`}
+    >
       <div className={`mx-auto max-w-7xl ${containerClass}`}>
         {children}
       </div>
