@@ -8,13 +8,22 @@ export default function QueEsOrigen() {
     <Section id="que-es" className="bg-brand-bgAlt border-y border-brand-text/5">
       <div className="max-w-6xl mx-auto">
         {/* Headline + intro */}
-        <div className="lg:col-span-10 lg:col-start-2 mb-16 md:mb-24 lg:mb-32">
-          <h2 className="font-serif text-[clamp(2.4rem,8vw,6rem)] mb-8 md:mb-12 lg:mb-16 tracking-tight text-brand-text leading-[1.0]">
-            {queEsOrigen.title}
-          </h2>
-          <p className="font-sans text-[clamp(1.05rem,3.5vw,2.2rem)] text-brand-text leading-[1.5] font-light max-w-4xl italic">
-            {queEsOrigen.intro}
-          </p>
+        <div className="flex flex-col lg:flex-row lg:items-end gap-8 lg:gap-16 mb-16 md:mb-24 lg:mb-32">
+          <div className="flex-1">
+            <h2 className="font-serif text-[clamp(2.4rem,8vw,6rem)] mb-8 md:mb-12 lg:mb-16 tracking-tight text-brand-text leading-[1.0]">
+              {queEsOrigen.title}
+            </h2>
+            <p className="font-sans text-[clamp(1.05rem,3.5vw,2.2rem)] text-brand-text leading-[1.5] font-light max-w-4xl italic">
+              {queEsOrigen.intro}
+            </p>
+          </div>
+          <div className="hidden lg:block lg:w-80 xl:w-96 shrink-0 self-end">
+            <img
+              src="/media/ambient/buda_005.webp"
+              alt="Estatua buda"
+              className="w-full object-contain"
+            />
+          </div>
         </div>
 
         {/* Pillars */}
