@@ -5,8 +5,18 @@ export default function Programa() {
   const { programa } = content;
 
   return (
-    <Section id="programa" className="bg-brand-bg">
-      <div className="max-w-6xl mx-auto">
+    <Section id="programa" className="relative bg-brand-bg overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <img
+          src="/media/selected_images/ventana-frutas.avif"
+          alt=""
+          className="w-full h-full object-cover object-center opacity-[0.06]"
+          style={{ animation: 'slowZoom 25s ease-in-out infinite alternate' }}
+        />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
         {/* Section header */}
         <div className="mb-14 md:mb-28 lg:mb-40 text-center max-w-2xl mx-auto">
           <h2 className="font-serif text-[clamp(2rem,7vw,4.5rem)] mb-6 md:mb-12 tracking-tight">
@@ -22,7 +32,8 @@ export default function Programa() {
           {programa.days.map((day, idx) => {
             const [diaNum, titulo] = day.title.split(' — ');
             return (
-              <div key={idx} className="relative group">
+              <div key={idx}>
+              <div className="relative group">
                 {/* Vertical line indicator – desktop only */}
                 <div className="absolute -left-4 md:-left-10 top-0 bottom-0 w-[1px] bg-brand-accent/5 overflow-hidden hidden md:block">
                   <div className="h-full w-full origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-1000 bg-brand-accent/30" />
@@ -49,6 +60,7 @@ export default function Programa() {
                     </p>
                   </div>
                 </div>
+              </div>
               </div>
             );
           })}

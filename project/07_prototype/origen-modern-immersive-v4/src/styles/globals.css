@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes slowZoom {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1.18); }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
