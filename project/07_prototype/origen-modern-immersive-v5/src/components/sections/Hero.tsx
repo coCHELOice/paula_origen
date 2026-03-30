@@ -56,7 +56,9 @@ export default function Hero() {
         <video
           ref={videoRef}
           muted
+          autoPlay
           playsInline
+          poster="/hero-editorial.webp"
           className={`w-full h-full object-cover object-center transition-opacity duration-[1800ms] ease-in-out ${
             fading ? 'opacity-0' : 'opacity-100'
           }`}

@@ -22,7 +22,7 @@ export default function MujeresDetras() {
           {mujeresDetras.members.map((member: any, idx: number) => (
             <div key={idx} className="flex flex-col group">
               {/* Portrait */}
-              <div className="aspect-[4/5] bg-brand-bgAlt/50 mb-6 md:mb-10 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000">
+              <div className="aspect-[4/5] bg-brand-bgAlt/50 mb-6 md:mb-10 overflow-hidden relative transition-all duration-1000">
                 {member.img ? (
                   <img
                     src={member.img}
