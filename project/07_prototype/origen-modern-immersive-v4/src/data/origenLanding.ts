@@ -118,19 +118,19 @@ export const content = {
         title: "Habitación triple",
         price: "$1.350.000 CLP",
         desc: "3 personas en una habitación. La opción más comunitaria, para vivir la experiencia en compañía.",
-        img: "/media/house/habitacion-triple.jpg"
+        img: "/media/house/dormitorio de tres camas.gif"
       },
       {
         title: "Habitación compartida",
         price: "$1.590.000 CLP",
         desc: "2 personas en una habitación. Un espacio ideal para compartir con otras mujeres en este mismo viaje.",
-        img: "/media/house/habitacion-compartida.jpg"
+        img: "/media/house/0350fc9d-4e32-49f1-b283-2fadf958be09.avif"
       },
       {
         title: "Habitación suite",
         price: "$2.590.000 CLP",
         desc: "Habitación privada para una persona. Un espacio solo para ti, con privacidad y ritmo propio.",
-        img: "/media/house/habitacion-suite.jpg"
+        img: "/media/house/dormitorio de una cama.gif"
       }
     ],
     ctaPrimary: "Reserva tu lugar"
