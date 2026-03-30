@@ -115,9 +115,15 @@ export const content = {
     intro: "Una experiencia íntima, diseñada para pocas. Esta experiencia fue diseñada para un grupo reducido de mujeres, cuidando cada detalle del proceso. Los cupos son limitados y se completan mediante reserva.",
     options: [
       {
+        title: "Habitación triple",
+        price: "$1.350.000 CLP",
+        desc: "3 personas en una habitación. La opción más comunitaria, para vivir la experiencia en compañía.",
+        img: "/media/house/habitacion-triple.jpg"
+      },
+      {
         title: "Habitación compartida",
         price: "$1.590.000 CLP",
-        desc: "2 a 3 personas en una habitación. Un espacio ideal para compartir con otras mujeres en este mismo viaje.",
+        desc: "2 personas en una habitación. Un espacio ideal para compartir con otras mujeres en este mismo viaje.",
         img: "/media/house/habitacion-compartida.jpg"
       },
       {

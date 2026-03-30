@@ -21,7 +21,7 @@ export default function Reserva() {
         </div>
 
         {/* Options */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-10">
           {reserva.options.map((option, idx) => (
             <div
               key={idx}
