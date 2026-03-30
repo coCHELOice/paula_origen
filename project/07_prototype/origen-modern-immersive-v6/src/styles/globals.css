@@ -40,6 +40,21 @@
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* Infinite gallery scroll */
+@keyframes infiniteScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-infinite-scroll {
+  animation: infiniteScroll 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
 /* Grain overlay */
 .grain-overlay {
   display: none;

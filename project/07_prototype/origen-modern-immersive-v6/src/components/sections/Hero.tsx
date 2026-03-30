@@ -6,6 +6,7 @@ export default function Hero() {
   const { hero } = content;
   const videoRef = useRef<HTMLVideoElement>(null);
   const [fading, setFading] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -52,13 +53,22 @@ export default function Hero() {
     >
       {/* ── Cinematic Background Video ── */}
       <div className="absolute inset-0 z-0">
+        {/* Fallback: solo visible si el video no puede reproducirse */}
+        {videoFailed && (
+          <img
+            src="/hero-editorial.webp"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        )}
         {/* Video con fade suave en loop */}
         <video
           ref={videoRef}
           muted
           autoPlay
           playsInline
-          poster="/hero-editorial.webp"
+          onError={() => setVideoFailed(true)}
           className={`w-full h-full object-cover object-center transition-opacity duration-[1800ms] ease-in-out ${
             fading ? 'opacity-0' : 'opacity-100'
           }`}

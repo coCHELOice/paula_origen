@@ -41,7 +41,7 @@ export default function FaqCierre() {
         <Button
           variant="primary"
           href="#reserva"
-          className="px-8 sm:px-12 py-4 w-full sm:w-auto"
+          className="px-8 sm:px-12 py-4 w-full sm:w-auto hidden md:inline-flex"
         >
           {faqCierre.ctaFinal}
         </Button>
