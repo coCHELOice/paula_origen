@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  ::selection {
+    background-color: rgba(140, 74, 47, 0.15); /* earth-deep */
+    color: #2B2B2B;
+  }
+}
+
+/* Global grain overlay - REMOVED TO ENSURE ZERO FRICTION */
+.grain-overlay {
+  display: none;
+}
+
+/* Scroll reveal classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  /* No filters here for performance */
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight scale for depth on background media */
+.scale-on-hover-container {
+  overflow: hidden;
+}
+.scale-on-hover-container img, .scale-on-hover-container video {
+  transition: transform 12s cubic-bezier(0.1, 0.8, 0.1, 1);
+  will-change: transform;
+}
+.scale-on-hover-container:hover img, .scale-on-hover-container:hover video {
+  transform: scale(1.05);
+}
+
+/* Hero animations */
+@keyframes videoFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-video-in {
+  animation: videoFadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes heroFadeUp {
+  0% { opacity: 0; transform: translateY(30px); filter: blur(3px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+}
+
+.animate-hero-up {
+  animation: heroFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-hero-up-delay-1 {
+  animation: heroFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+  opacity: 0;
+}
+
+.animate-hero-up-delay-2 {
+  animation: heroFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+  opacity: 0;
+}
+
+.animate-hero-sync-headline {
+  /* Headline appears when arms are ~80% open */
+  animation: heroFadeUp 1.8s cubic-bezier(0.16, 1, 0.2, 1) 2.2s forwards;
+  opacity: 0;
+}
+
+.animate-hero-sync-cta {
+  /* CTA appears when arms fully open */
+  animation: heroFadeUp 1.8s cubic-bezier(0.16, 1, 0.2, 1) 3.2s forwards;
+  opacity: 0;
+}
