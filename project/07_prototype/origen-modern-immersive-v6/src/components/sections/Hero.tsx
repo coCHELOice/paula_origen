@@ -112,21 +112,21 @@ export default function Hero() {
 
       {/* ── Content ── */}
       <div
-        className="relative z-10 w-full px-5 sm:px-8 md:px-[8vw] pb-16 pt-28 sm:pt-32 md:pt-0
+        className="relative z-10 w-full px-5 sm:px-8 md:px-[8vw] pb-12 pt-28 sm:pt-32 md:pt-20 lg:pt-0
                    flex flex-col justify-end sm:justify-center"
         style={{ minHeight: '100svh' }}
       >
-        <div className="flex flex-col items-start w-full sm:max-w-[70vw] md:max-w-[52vw] lg:max-w-[44vw] xl:max-w-[40vw]">
+        <div className="flex flex-col items-start w-full sm:max-w-[70vw] md:max-w-[55vw] lg:max-w-[46vw] xl:max-w-[40vw]">
 
-          <span className="animate-hero-up font-sans text-[10px] sm:text-xs tracking-[0.24em] text-[#EBE9E2]/65 uppercase mb-5 sm:mb-8">
+          <span className="animate-hero-up font-sans text-[10px] sm:text-xs tracking-[0.24em] text-[#EBE9E2]/65 uppercase mb-4 sm:mb-6">
             {hero.eyebrow}
           </span>
 
-          <h1 className="animate-hero-sync-headline font-serif text-[clamp(2.6rem,10vw,6.5rem)] leading-[1.0] tracking-[-0.02em] mb-6 sm:mb-10 text-[#FDFCF9] drop-shadow-[0_2px_16px_rgba(0,0,0,0.4)]">
+          <h1 className="animate-hero-sync-headline font-serif text-[clamp(2.4rem,5.5vw,4.5rem)] leading-[1.05] tracking-[-0.02em] mb-5 sm:mb-7 text-[#FDFCF9] drop-shadow-[0_2px_16px_rgba(0,0,0,0.4)]">
             {hero.title}
           </h1>
 
-          <p className="animate-hero-sync-headline font-sans text-base sm:text-lg md:text-xl text-[#EBE9E2]/75 leading-[1.65] mb-10 sm:mb-14 font-light tracking-[0.02em] max-w-[90%] sm:max-w-none drop-shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
+          <p className="animate-hero-sync-headline font-sans text-sm sm:text-base md:text-lg text-[#EBE9E2]/75 leading-[1.65] mb-8 sm:mb-10 font-light tracking-[0.02em] max-w-[90%] sm:max-w-none drop-shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
             {hero.subtitle}
           </p>
 

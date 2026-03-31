@@ -4,8 +4,8 @@ import { content } from '../../data/origenLanding';
 const itemImages = [
   '/media/house/dormitorio-doble.avif',
   '/media/house/desayuno.avif',
-  '/media/ambient/temazcal.webp',
-  '/media/house/vino-pipas.avif',
+  '/media/paula-origen-photos/Gemini_Generated_Image_6x9hyj6x9hyj6x9h.png',
+  '/media/paula-origen-photos/WhatsApp Image 2026-03-30 at 21.46.32 (3).jpeg',
   '/media/house/portal.avif',
   '/media/ambient/paula-manos.png',
 ];
