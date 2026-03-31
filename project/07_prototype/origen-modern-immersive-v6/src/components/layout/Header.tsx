@@ -22,8 +22,9 @@ export default function Header() {
 
   const navLinks = [
     { href: '#que-es', label: 'Qué es' },
-    { href: '#experiencia', label: 'La experiencia' },
     { href: '#programa', label: 'Programa' },
+    { href: '#mujeres-detras', label: 'El equipo' },
+    { href: '#reserva', label: 'Reserva' },
   ];
 
   return (

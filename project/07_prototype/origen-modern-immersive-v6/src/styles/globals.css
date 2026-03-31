@@ -146,3 +146,13 @@
 .safe-bottom {
   padding-bottom: env(safe-area-inset-bottom, 8px);
 }
+
+/* Offset de scroll para compensar el header fijo */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Separador sutil entre secciones de tono similar */
+section + section {
+  border-top: 1px solid rgba(43, 43, 43, 0.06);
+}
