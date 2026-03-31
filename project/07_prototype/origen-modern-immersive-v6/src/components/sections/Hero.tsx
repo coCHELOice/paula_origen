@@ -12,34 +12,38 @@ export default function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
-    video.playbackRate = 0.80;
+    // Seteamos playbackRate solo cuando el metadata está listo (requerido por iOS Safari)
+    const handleLoadedMetadata = () => {
+      video.playbackRate = 0.80;
+    };
 
-    // Suave fade-out antes del final → fade-in al reiniciar
     const handleTimeUpdate = () => {
       if (!video.duration) return;
       const remaining = video.duration - video.currentTime;
-
-      // Empieza a hacer fade-out 1.8s antes del final
       if (remaining <= 1.8 && !fading) {
         setFading(true);
       }
     };
 
     const handleEnded = () => {
-      // Si loop=false lo manejamos nosotros para controlar la transición
       video.currentTime = 0;
       setTimeout(() => {
         video.play().catch(() => {});
         setFading(false);
-      }, 400); // pequeña pausa negra en el corte para el fade-in
+      }, 400);
     };
 
+    video.addEventListener('loadedmetadata', handleLoadedMetadata);
     video.addEventListener('timeupdate', handleTimeUpdate);
     video.addEventListener('ended', handleEnded);
 
-    video.play().catch(() => {});
+    // Si iOS bloquea el autoplay, activamos el fallback de imagen
+    video.play().catch(() => {
+      setVideoFailed(true);
+    });
 
     return () => {
+      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
       video.removeEventListener('timeupdate', handleTimeUpdate);
       video.removeEventListener('ended', handleEnded);
     };
